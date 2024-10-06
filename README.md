@@ -9,7 +9,6 @@ This project contains SQL queries used to analyze the **Bank Dataset** for vario
   - [Beginner Queries](#beginner-queries)
   - [Intermediate Queries](#intermediate-queries)
   - [Advanced Queries](#advanced-queries)
-- [Results](#results)
 - [Contributing](#contributing)
 - [License](#license)
 
@@ -129,14 +128,6 @@ In advanced queries, we focus on more complex operations like grouping by job ty
    ```
    - *Explanation*: This query groups clients by their education level and calculates the average number of previous contacts for each group. It’s useful for analyzing how education influences engagement with the bank.
 
-## Results
-
-You can include visualizations and screenshots of results from running the SQL queries. This section could contain graphs or tables that show the results of queries such as the average balance based on marital status or job type.
-
-Sample visualizations:
-
-1. ![Average Balance by Marital Status](path_to_visualization_image)
-2. ![Maximum Balance with Personal Loans](path_to_visualization_image)
 
 ## Contributing
 
