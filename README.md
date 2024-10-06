@@ -35,21 +35,25 @@ These queries focus on basic SQL operations such as viewing all records, selecti
    ```sql
    SELECT * FROM bank.bank;
    ```
+   - *Explanation*: This query retrieves all the records and columns from the dataset, allowing us to view the full data available in the bank table.
 
 2. **Select specific columns**:
    ```sql
    SELECT age, job, balance FROM bank.bank;
    ```
+   - *Explanation*: Here, we are selecting only the `age`, `job`, and `balance` columns from the dataset. This is useful when we need specific data points without pulling the entire dataset.
 
 3. **Filter clients who are married**:
    ```sql
    SELECT * FROM bank.bank WHERE marital = 'married';
    ```
+   - *Explanation*: This query filters the dataset to show only the records of clients who are married. The condition `WHERE marital = 'married'` is used to achieve this.
 
 4. **Filter clients with a balance greater than 5000**:
    ```sql
    SELECT * FROM bank.bank WHERE balance > 5000;
    ```
+   - *Explanation*: We use this query to find all clients who have a balance greater than 5000. It helps in identifying clients with significant deposits.
 
 ### Intermediate Queries
 
@@ -59,6 +63,7 @@ Here we delve into grouping, averaging, and counting specific subsets of data.
    ```sql
    SELECT COUNT(*) FROM bank.bank WHERE housing = 'yes';
    ```
+   - *Explanation*: This query counts the total number of clients who have taken a housing loan. It gives an overview of how many clients are using the bank's housing loan service.
 
 2. **Find the average balance of clients based on marital status**:
    ```sql
@@ -66,6 +71,7 @@ Here we delve into grouping, averaging, and counting specific subsets of data.
    FROM bank.bank 
    GROUP BY marital;
    ```
+   - *Explanation*: This query calculates the average balance for clients based on their marital status. The `GROUP BY` clause groups the data by `marital` status, and `AVG(balance)` calculates the average balance for each group.
 
 3. **Find the average balance for each education level**:
    ```sql
@@ -73,6 +79,7 @@ Here we delve into grouping, averaging, and counting specific subsets of data.
    FROM bank.bank 
    GROUP BY education;
    ```
+   - *Explanation*: Similar to the previous query, this one groups clients by `education` level and calculates the average balance for each group. It helps in understanding the relationship between education level and financial standing.
 
 4. **Find the maximum balance among clients with personal loans**:
    ```sql
@@ -80,6 +87,7 @@ Here we delve into grouping, averaging, and counting specific subsets of data.
    FROM bank.bank 
    WHERE loan = 'yes';
    ```
+   - *Explanation*: This query finds the highest balance among clients who have personal loans. It’s useful for determining the top depositors among loan holders.
 
 ### Advanced Queries
 
@@ -92,6 +100,7 @@ In advanced queries, we focus on more complex operations like grouping by job ty
    WHERE y = 'yes'
    GROUP BY job;
    ```
+   - *Explanation*: This query sums the total balance for customers who subscribed to a term deposit (where `y = 'yes'`), and it groups the results by job type. This helps in understanding which professions are more likely to have higher deposits.
 
 2. **Calculate the percentage of customers who have both personal and housing loans**:
    ```sql
@@ -99,6 +108,7 @@ In advanced queries, we focus on more complex operations like grouping by job ty
    FROM bank.bank
    WHERE loan = 'yes' AND housing = 'yes';
    ```
+   - *Explanation*: Here, we calculate the percentage of clients who have both a personal loan and a housing loan. The main query counts the number of such clients, while the subquery counts the total number of clients to calculate the percentage.
 
 3. **Identify customers with the longest last contact duration who subscribed to a term deposit**:
    ```sql
@@ -108,6 +118,7 @@ In advanced queries, we focus on more complex operations like grouping by job ty
    ORDER BY duration DESC 
    LIMIT 10;
    ```
+   - *Explanation*: This query finds the top 10 customers with the longest last contact duration (where they subscribed to a term deposit). It orders the records by `duration` in descending order and limits the results to 10 rows.
 
 4. **Find the relationship between education and the number of previous contacts**:
    ```sql
@@ -116,6 +127,7 @@ In advanced queries, we focus on more complex operations like grouping by job ty
    GROUP BY education 
    ORDER BY AVG(previous) DESC;
    ```
+   - *Explanation*: This query groups clients by their education level and calculates the average number of previous contacts for each group. It’s useful for analyzing how education influences engagement with the bank.
 
 ## Results
 
@@ -135,6 +147,4 @@ If you'd like to contribute to this project, feel free to submit a pull request 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
-
-
 Let me know if you need further adjustments or more suggestions!
