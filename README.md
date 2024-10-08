@@ -1,4 +1,4 @@
-# Bank Dataset Query Analysis
+# Banking Data Analysis
 
 This project contains SQL queries used to analyze the **Bank Dataset** for various levels of complexity—beginner, intermediate, and advanced. The queries focus on understanding customer demographics, financial behaviors, and more.
 
